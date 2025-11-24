@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Login() {
     return (
@@ -8,11 +9,6 @@ export default function Login() {
                 {/* Left Section */}
                 <div className="p-10 flex flex-col justify-between bg-white">
                     <div>
-                        <h1 className="text-xl font-semibold text-teal-700 mb-6 flex items-center gap-2">
-                            <span className="inline-block w-3 h-3 bg-teal-600 rounded-full"></span>
-                            NotesApp
-                        </h1>
-
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
                             Welcome to NotesApp!
                         </h2>
@@ -69,7 +65,9 @@ export default function Login() {
 
                     <p className="text-center text-sm text-gray-600 mt-6">
                         Don’t have an account?{" "}
-                        <span className="text-teal-600 cursor-pointer">Register</span>
+                        <Link href="/register">
+                            <span className="text-teal-600 cursor-pointer">Register</span>
+                        </Link>
                     </p>
 
                     <p className="text-xs text-gray-400 text-center mt-8">
