@@ -3,87 +3,67 @@ import Link from "next/link";
 
 export default function Login() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-teal-50 to-blue-50 flex items-center justify-center p-4">
-            <div className="bg-white w-full max-w-5xl rounded-3xl shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
-                
-                {/* Left Section */}
-                <div className="p-10 flex flex-col justify-between bg-white">
-                    <div>
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
-                            Welcome to NotesApp!
-                        </h2>
-                    </div>
+        <div className="min-h-screen bg-teal-600 flex items-center justify-center p-2">
 
-                    {/* Illustration */}
-                    <div className="mt-10">
-                        <Image
-                            src="/ilustrasi-notes.jpg"
-                            alt="Team Illustration"
-                            width={500}
-                            height={500}
-                            className="w-full h-auto"
+            <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: "url('/bg-notes.png')" }}
+            />
+
+            <div className="absolute inset-0 bg-black/40" />
+
+            <div className="bg-white px-10 py-8 flex flex-col items-center rounded-xl border border-gray-200 w-full max-w-md relative z-10">
+
+                <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-6">
+                    Register to <span className="text-teal-600">Notes App</span>
+                </h2>
+
+                <form className="flex flex-col gap-4 w-full" action="/dashboard" method="POST">
+                    <input
+                        type="full name"
+                        placeholder="Enter full name"
+                        className="text-base w-full bg-[#F3F3F3] rounded-full px-5 py-3 
+                                placeholder-[#848484] focus:outline-none focus:ring-2 focus:ring-purple-400"
+                    />
+
+                    <input
+                        type="email"
+                        placeholder="Enter email"
+                        className="text-base w-full bg-[#F3F3F3] rounded-full px-5 py-3 
+                                placeholder-[#848484] focus:outline-none focus:ring-2 focus:ring-purple-400"
+                    />
+
+                    <div className="w-full">
+                        <input
+                            type="password"
+                            placeholder="Enter password"
+                            className="text-base w-full bg-[#F3F3F3] rounded-full px-5 py-3 
+                                    placeholder-[#848484] focus:outline-none focus:ring-2 focus:ring-purple-400"
                         />
+                        <p className="text-right text-sm text-gray-500 mt-1 cursor-pointer hover:text-teal-600">
+                            Forgot password?
+                        </p>
                     </div>
-                </div>
 
-                {/* Right Section */}
-                <div className="p-10 flex flex-col justify-center bg-white">
-                    <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+                    <button
+                        type="submit"
+                        className="w-full bg-teal-600 text-white py-3 rounded-full font-semibold 
+                                   hover:bg-teal-700 transition"
+                    >
                         Register
-                    </h2>
-                    <p className="text-sm text-gray-500 mb-8">Enter your details</p>
+                    </button>
+                </form>
 
-                    <form className="flex flex-col gap-5">
-                    <div>
-                            <label className="text-sm font-medium text-gray-700">Nama Lengkap</label>
-                            <input
-                                type="name"
-                                placeholder="Enter nama lengkap"
-                                className="mt-2 w-full bg-gray-100 rounded-full px-5 py-3 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                            />
-                        </div>
-                        
-                        <div>
-                            <label className="text-sm font-medium text-gray-700">Email</label>
-                            <input
-                                type="email"
-                                placeholder="Enter email"
-                                className="mt-2 w-full bg-gray-100 rounded-full px-5 py-3 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                            />
-                        </div>
-
-                        <div>
-                            <label className="text-sm font-medium text-gray-700">Password</label>
-                            <input
-                                type="password"
-                                placeholder="Enter password"
-                                className="mt-2 w-full bg-gray-100 rounded-full px-5 py-3 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                            />
-                            <p className="text-right text-sm text-gray-500 mt-1 cursor-pointer hover:text-teal-600">
-                                Forgot password?
-                            </p>
-                        </div>
-
-                        <button
-                            type="submit"
-                            className="bg-teal-600 text-white py-2 rounded-full font-semibold hover:bg-teal-700 transition"
-                        >
-                            Register
-                        </button>
-                    </form>
-
-                    <p className="text-center text-sm text-gray-600 mt-6">
-                        Have an account?{" "}
-                        <Link href="/login">
+                <p className="text-center text-sm text-gray-600 mt-6">
+                    Have an account?{" "}
+                    <Link href="/login">
                         <span className="text-teal-600 cursor-pointer">Login</span>
-                        </Link>
-                    </p>
+                    </Link>
+                </p>
 
-                    <p className="text-xs text-gray-400 text-center mt-8">
-                        ©2025 all rights reserved
-                    </p>
-                </div>
-
+                <p className="text-xs text-gray-400 text-center mt-5">
+                    ©2025 all rights reserved
+                </p>
             </div>
         </div>
     );
