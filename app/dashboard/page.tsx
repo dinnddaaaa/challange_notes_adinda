@@ -1,5 +1,6 @@
 import Nav from '../../components/navbar';
 import SearchCreate from '../../components/search';
+import NoteCard from '../../components/card_note';
 
 export default function Page() {
     return (
@@ -13,6 +14,7 @@ export default function Page() {
                         <h2 className="text-lg font-medium text-slate-700">Your notes</h2>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <NoteCard />
                         <div className="rounded-xl p-6 min-h-[160px] w-64 flex items-center justify-center border-2 border-dashed border-slate-300">
                             <button className="text-slate-600">+ New Note</button>
                         </div>
