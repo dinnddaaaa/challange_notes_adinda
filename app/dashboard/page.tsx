@@ -1,14 +1,5 @@
-import React from 'react';
 import Nav from '../../components/navbar';
 import SearchCreate from '../../components/search';
-
-
-const DUMMY = [
-    { id: '1', title: 'Mid test exam', body: 'Ullamcorper...', date: '12/12/2024', color: 'bg-yellow-200' },
-    { id: '2', title: "Mid test exam", body: 'Ullamcorper...', date: '12/12/2024', color: 'bg-rose-200' },
-    { id: '3', title: "Jonas's notes", body: 'Lorem ipsum...', date: '12/13/2024', color: 'bg-sky-200' },
-];
-
 
 export default function Page() {
     return (

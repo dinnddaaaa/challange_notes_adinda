@@ -1,23 +1,17 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Login() {
     return (
         <div className="min-h-screen bg-teal-600 flex items-center justify-center p-2">
-
             <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: "url('/bg-notes.png')" }}
             />
-
             <div className="absolute inset-0 bg-black/40" />
-
             <div className="bg-white px-10 py-8 flex flex-col items-center rounded-xl border border-gray-200 w-full max-w-md relative z-10">
-
                 <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-6">
                     Sign in to <span className="text-teal-600">Notes App</span>
                 </h2>
-
                 <form className="flex flex-col gap-4 w-full">
                     <input
                         type="email"
