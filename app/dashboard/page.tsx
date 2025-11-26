@@ -6,8 +6,6 @@ import NoteCard from '../../components/note_card';
 import NoteDetail from '../../components/note_detail';
 
 export default function Page() {
-
-    // gunakan nama variabel yang sama!
     const [showDetail, setShowDetail] = useState(false);
 
     return (
@@ -23,10 +21,8 @@ export default function Page() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-                        {/* CLICK NOTE → OPEN DETAIL */}
                         <NoteCard onClick={() => setShowDetail(true)} />
 
-                        {/* NEW NOTE */}
                         <div className="rounded-xl p-6 min-h-[160px] w-64 flex items-center justify-center border-2 border-dashed border-slate-300">
                             <button className="text-slate-600">+ New Note</button>
                         </div>
@@ -34,7 +30,6 @@ export default function Page() {
                 </section>
             </main>
 
-            {/* SHOW MODAL */}
             {showDetail && (
                 <NoteDetail onClose={() => setShowDetail(false)} />
             )}
